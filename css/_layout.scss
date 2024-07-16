@@ -96,6 +96,7 @@
       height: 60px;
       padding: 0 27px;
       font-size: $font-base;
+      cursor: pointer;
       @include mobile {
         width: 35%;
       }

@@ -43,7 +43,8 @@
       background: #ffffff4d;
     }
     @include mobile {
-      padding: 13px 106px;
+      padding: 13px 0;
+      width: 100%;
     }
   }
 }
@@ -158,6 +159,7 @@
     }
     @include mobile {
       width: 100%;
+      padding: 18px 0;
     }
   }
 }
