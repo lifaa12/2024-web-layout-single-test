@@ -1,0 +1,144 @@
+.navbar {
+  padding: 16px 0;
+  &__logo a {
+    @include navbar-logo;
+  }
+  &__menu {
+    @include mobile {
+      display: none;
+    }
+    li {
+      align-self: center;
+    }
+    a {
+      text-decoration: none;
+      color: $gray;
+      display: flex;
+      margin-left: 30px;
+      &:hover {
+        color: darken($gray, 20%);
+      }
+    }
+  }
+  &__mobile-btn {
+    display: none;
+    cursor: pointer;
+    span {
+      position: relative;
+      &:hover {
+        color: darken($gray, 20%);
+      }
+    }
+    .menu {
+      font-size: 40px;
+      margin-left: 20px;
+    }
+    @include mobile {
+      display: flex;
+      align-items: center;
+      color: $gray;
+    }
+    .cart-num {
+      &::after {
+        content: "3";
+        position: absolute;
+        padding: 2px 4px 4px 4px;
+        font-size: $font-base * 0.75;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        background: $primary;
+        color: #fff;
+        font-family: "Segoe UI";
+        top: -8px;
+        left: 18px;
+      }
+    }
+  }
+}
+.footer-bg {
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index10.jpg?raw=true");
+  background-size: cover;
+  background-position: center;
+}
+.footer {
+  padding: 312px 0 112px 0;
+  &__text {
+    font-size: $font-base * 2;
+    color: $gray;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  &__subscribe {
+    max-width: 345px;
+    input {
+      border: 2px solid $primary;
+      border-right: none;
+      width: 219px;
+      height: 60px;
+      padding: 0 0 5px 15px;
+      font-size: $font-base * 1.8;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      @include mobile {
+        width: 65%;
+      }
+      &::placeholder {
+        font-size: $font-base;
+      }
+    }
+    button {
+      background: $primary;
+      border: 2px solid $primary;
+      border-left: none;
+      border-radius: 0 4px 4px 0;
+      color: #fff;
+      height: 60px;
+      padding: 0 27px;
+      font-size: $font-base;
+      @include mobile {
+        width: 35%;
+      }
+      &:hover {
+        background: darken($primary, 3%);
+      }
+    }
+  }
+}
+.footer-bar-bg {
+  background: $primary;
+}
+.footer-bar {
+  padding: 20px 0;
+  @include mobile {
+    justify-content: center;
+  }
+  &__logo {
+    a {
+      @include footer-logo;
+    }
+    span {
+      color: #fff;
+      margin-left: 20px;
+      font-size: $font-base * 0.875;
+      align-self: center;
+    }
+  }
+  &__menu {
+    @include mobile {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+    }
+    li {
+      color: #fff;
+      font-size: $font-base * 1.25;
+      margin-left: 36px;
+      cursor: pointer;
+      &:hover {
+        color: darken(#fff, 10%);
+      }
+    }
+  }
+}

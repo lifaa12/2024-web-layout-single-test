@@ -1,0 +1,434 @@
+// index
+.banner-bg {
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/perfume-week6/index1.jpg?raw=true");
+  background-size: cover;
+}
+.banner-content {
+  @include pad {
+    justify-content: center;
+  }
+}
+.banner-text {
+  padding: 295px 0;
+  color: #fff;
+  max-width: 390px;
+  @include pad {
+    text-align: center;
+  }
+  @include mobile {
+    text-align: left;
+    padding: 101px 0 135px 0;
+  }
+  &__title {
+    font-size: $font-base * 2.5;
+    font-weight: 500;
+  }
+  &__content {
+    font-size: $font-base * 1.5;
+    font-weight: 300;
+    @include pad {
+      font-weight: 400;
+    }
+  }
+  &__btn {
+    color: #fff;
+    font-size: $font-base * 1.75;
+    padding: 13px 109px;
+    border-radius: 30px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 16px;
+    &:hover {
+      background: #ffffff4d;
+    }
+    @include mobile {
+      padding: 13px 106px;
+    }
+  }
+}
+.intro {
+  margin-top: 60px;
+}
+.intro-card {
+  display: flex;
+  @include pad {
+    flex-direction: column-reverse;
+    margin-bottom: 60px;
+  }
+  @include mobile {
+    margin-bottom: 32px;
+  }
+  &__text {
+    max-width: 555px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    @include pad {
+      text-align: center;
+    }
+    @include mobile {
+      text-align: left;
+    }
+    h3 {
+      font-size: $font-base * 2;
+      font-weight: bold;
+    }
+    p {
+      max-width: 350px;
+      font-size: $font-base * 1.25;
+      margin-bottom: 16px;
+      @include pad {
+        max-width: 600px;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $info;
+      font-weight: 600;
+      &:hover {
+        color: darken($info, 10%);
+      }
+    }
+  }
+  &__img {
+    max-width: 555px;
+    height: 555px;
+    object-fit: cover;
+    @include pad {
+      align-self: center;
+    }
+    @include mobile {
+      height: 350px;
+    }
+  }
+}
+.intro-training {
+  margin-bottom: 60px;
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  &__img {
+    max-width: 555px;
+    @include pad {
+      max-width: 400px;
+    }
+    @include mobile {
+      max-width: 555px;
+      height: 600px;
+    }
+  }
+  &__text {
+    max-width: 555px;
+    padding: 92px 0 92px 110px;
+    @include pad {
+      padding-left: 30px;
+    }
+    @include mobile {
+      width: 100%;
+      padding: 8px 0 0 0;
+    }
+    li {
+      margin-bottom: 52px;
+      max-width: 350px;
+      @include mobile {
+        margin-bottom: 20px;
+      }
+    }
+    h3 {
+      font-size: $font-base * 1.5;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+  }
+  &__btn {
+    margin-top: 8px;
+    padding: 18px 51px;
+    border: 2px solid #000000;
+    opacity: 1;
+    border-radius: 30px;
+    background: #fff;
+    font-size: $font-base * 1.25;
+    cursor: pointer;
+    &:hover {
+      background: #0000000d;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+.index-product-bg {
+  background: #e0e0e0;
+}
+.index-product {
+  margin: 0 -15px 60px -15px;
+  padding: 40px 0;
+  @include mobile {
+    padding: 32px 0 4px 0;
+    margin: 0 0 40px 0;
+    justify-content: center;
+  }
+}
+.index-product-card {
+  width: 33.333%;
+  @include pad {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include mobile {
+    width: 95%;
+    margin-bottom: 32px;
+  }
+  &__content {
+    margin: 0 15px;
+    @include mobile {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (max-width: 375px) {
+        align-items: flex-start;
+      }
+      align-items: center;
+    }
+    &:hover img {
+      transform: scale(0.9);
+      border-radius: 20px;
+    }
+  }
+  &__img {
+    height: 540px;
+    transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;
+    display: block;
+    @include pad {
+      width: 540px;
+      object-fit: cover;
+    }
+    @include mobile {
+      width: 100%;
+      min-width: 345px;
+      min-height: 350px;
+    }
+    @media (max-width: 380px) {
+      min-width: auto;
+      min-height: auto;
+      max-width: 345px;
+      max-height: 350px;
+    }
+  }
+  &__title {
+    font-size: $font-base * 1.5;
+    font-weight: bold;
+  }
+  &__subTitle {
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+  &__price {
+    font-weight: 300;
+  }
+  &__originalPrice {
+    text-decoration: line-through;
+    color: $gray;
+  }
+  &__specialPrice {
+    margin-right: 8px;
+  }
+  .sold-out-wrap {
+    position: relative;
+    @include pad {
+      width: 540px;
+    }
+    @include mobile {
+      width: 100%;
+      min-width: 345px;
+      min-height: 350px;
+    }
+    @media (max-width: 380px) {
+      min-width: auto;
+      min-height: auto;
+      max-width: 345px;
+      max-height: 350px;
+    }
+  }
+  .sold-out {
+    &::before {
+      content: "";
+      background: #000000;
+      opacity: 0.3;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 9;
+    }
+    &::after {
+      content: "Sold out";
+      color: #ffffff;
+      position: absolute;
+      left: 40%;
+      top: 252px;
+      font-size: $font-base * 1.5;
+      z-index: 10;
+      @include mobile {
+        top: 50%;
+      }
+    }
+  }
+}
+.index-news {
+  margin-bottom: 60px;
+  @include pad {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include mobile {
+    margin: 0;
+  }
+  &__img {
+    max-width: 730px;
+    @include mobile {
+      min-height: 520px;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    margin: 82px 0 82px 30px;
+    @include mobile {
+      margin: 8px 0 40px 0;
+    }
+    h3 {
+      font-size: $font-base * 2;
+      font-weight: bold;
+    }
+    h4 {
+      font-size: $font-base * 1.25;
+      margin-bottom: 16px;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    a {
+      text-decoration: none;
+      color: $info;
+      font-weight: 600;
+      &:hover {
+        color: darken($info, 10%);
+      }
+    }
+  }
+}
+
+// product
+.product-menu-bg {
+  background: $primary;
+}
+.product-menu {
+  padding: 14px 0;
+  @include mobile {
+    display: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  li {
+    margin-right: 28px;
+    color: #fff;
+    font-size: $font-base * 1.25;
+    cursor: pointer;
+    &:hover {
+      color: darken(#fff, 10%);
+    }
+  }
+}
+.product-list {
+  padding-top: 80px;
+  margin: 0 -15px;
+  @include mobile {
+    padding-top: 50px;
+  }
+  &__wrap {
+    width: 25%;
+    @include pad {
+      width: 33.333%;
+    }
+    @include mobile {
+      width: 50%;
+    }
+  }
+  &__content {
+    margin: 0 15px;
+    &:hover img {
+      transform: scale(0.9);
+      border-radius: 20px;
+    }
+  }
+  &__img {
+    height: 255px;
+    transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s;
+    object-fit: cover;
+    @media (max-width: 500px) {
+      max-width: 165px;
+      max-height: 165px;
+    }
+  }
+  &__title {
+    font-size: $font-base * 1.5;
+    font-weight: bold;
+    margin-top: 2px;
+    cursor: pointer;
+    @include mobile {
+      font-size: $font-base * 1.25;
+    }
+  }
+  &__price {
+    font-weight: 300;
+  }
+  &__originalPrice {
+    text-decoration: line-through;
+    color: $gray;
+  }
+  &__specialPrice {
+    margin-right: 8px;
+  }
+  &__icon {
+    margin-top: 3px;
+    li {
+      margin: 0 11px 58px 0;
+      @include mobile {
+        margin-bottom: 30px;
+      }
+    }
+    a {
+      color: $secondary;
+      &:hover {
+        color: darken($secondary, 5%);
+      }
+    }
+  }
+}
+.pagination {
+  margin: 20px 0 60px 0;
+  a {
+    color: #000;
+    text-decoration: none;
+    font-size: $font-base * 1.25;
+    margin: 0 10px;
+    &:hover {
+      color: $info;
+      text-decoration: underline;
+    }
+    .pagination-active {
+      text-decoration: underline;
+      color: $info;
+    }
+  }
+}
